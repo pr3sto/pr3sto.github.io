@@ -1,0 +1,35 @@
+@keyframes glitch-anim-text-1 {
+  $steps: 20;
+
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $r1: percentage(random(100) / 100);
+      $r2: percentage(random(100) / 100);
+      -webkit-clip-path: polygon(0 $r1, 100% $r1, 100% $r2, 0 $r2);
+      clip-path: polygon(0 $r1, 100% $r1, 100% $r2, 0 $r2);
+    }
+  }
+}
+
+@keyframes glitch-anim-text-2 {
+  $steps: 20;
+
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $r1: percentage(random(100) / 100);
+      $r2: percentage(random(100) / 100);
+      -webkit-clip-path: polygon(0 $r1, 100% $r1, 100% $r2, 0 $r2);
+      clip-path: polygon(0 $r1, 100% $r1, 100% $r2, 0 $r2);
+    }
+  }
+}
+
+@keyframes glitch-anim-text-skew {
+  $steps: 10;
+
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      transform: skew((random(10) - 5) + deg);
+    }
+  }
+}

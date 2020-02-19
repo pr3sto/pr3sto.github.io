@@ -5,15 +5,30 @@
 </template>
 
 <style>
+@font-face {
+  font-family: "ArcaMajora3-Bold";
+  src: url("/fonts/ArcaMajora3-Bold.eot");
+  src: url("/fonts/ArcaMajora3-Bold.woff") format("woff"),
+  url("/fonts/ArcaMajora3-Bold.woff") format("woff2")
+}
+
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'ArcaMajora3-Bold', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 </style>
