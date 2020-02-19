@@ -248,7 +248,7 @@ export default {
     return {
       animationRequestId: 0,
       letterIndex: 0,
-      letters: ["p", "r", "3", "s", "t", "o"]
+      letterImages: []
     };
   },
   mounted: function() {
@@ -259,6 +259,25 @@ export default {
       var el = document.getElementsByClassName("info-section")[0];
       var n = Math.floor(Math.random() * 3) + 1; // random in [1,2,3]
       el.classList.add("info-section--" + n);
+
+      var p = new Image();
+      p.src = "/images/pr3sto_logo_p.png";
+      this.letterImages.push(p);
+      var r = new Image();
+      r.src = "/images/pr3sto_logo_r.png";
+      this.letterImages.push(r);
+      var _3 = new Image();
+      _3.src = "/images/pr3sto_logo_3.png";
+      this.letterImages.push(_3);
+      var s = new Image();
+      s.src = "/images/pr3sto_logo_s.png";
+      this.letterImages.push(s);
+      var t = new Image();
+      t.src = "/images/pr3sto_logo_t.png";
+      this.letterImages.push(t);
+      var o = new Image();
+      o.src = "/images/pr3sto_logo_o.png";
+      this.letterImages.push(o);
     },
     blinkLogo: function() {
       if (this.animationRequestId != 0) {
@@ -269,8 +288,7 @@ export default {
       var logoImg = document.getElementById("logo-glitch");
 
       // change letter image
-      letterImg.src =
-        "/images/pr3sto_logo_" + this.letters[this.letterIndex] + ".png";
+      letterImg.src = this.letterImages[this.letterIndex].src;
 
       logoImg.style.opacity = 0.65;
       letterImg.style.opacity = 1;
